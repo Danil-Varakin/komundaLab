@@ -1,0 +1,137 @@
+{
+  "components": [
+    {
+      "text": "# Служебная записка\n\n## Закупка мяса\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_170mb8r",
+        "columns": null
+      },
+      "id": "Field_10avfbx",
+      "properties": {}
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0i3dgnu",
+        "columns": null
+      },
+      "id": "Field_0o323og"
+    },
+    {
+      "label": "Необходимые товары",
+      "components": [
+        {
+          "label": "Наименование товара",
+          "values": [
+            {
+              "label": "Вырезка",
+              "value": "tenderloin"
+            },
+            {
+              "label": "Окорок",
+              "value": "ham"
+            },
+            {
+              "label": "Лопатка",
+              "value": "shoulder"
+            },
+            {
+              "label": "Шея",
+              "value": "neck"
+            },
+            {
+              "label": "Ребра",
+              "value": "ribs"
+            }
+          ],
+          "type": "select",
+          "layout": {
+            "row": "Row_0nyxzdz",
+            "columns": 6
+          },
+          "id": "Field_0awh1ml",
+          "key": "meet_type",
+          "validate": {
+            "required": true
+          },
+          "defaultValue": "tenderloin"
+        },
+        {
+          "label": "Кол-во",
+          "type": "number",
+          "layout": {
+            "row": "Row_0nyxzdz",
+            "columns": 4
+          },
+          "id": "Field_1sgddtb",
+          "key": "number_qt",
+          "defaultValue": 0,
+          "validate": {
+            "min": "0",
+            "max": "100",
+            "required": true
+          },
+          "decimalDigits": 0
+        },
+        {
+          "label": "Единица измерения",
+          "values": [
+            {
+              "label": "кг",
+              "value": "kg"
+            },
+            {
+              "label": "грамм",
+              "value": "g"
+            }
+          ],
+          "type": "select",
+          "layout": {
+            "row": "Row_0nyxzdz",
+            "columns": 3
+          },
+          "id": "Field_1qadpn8",
+          "key": "select_kg",
+          "defaultValue": "kg"
+        }
+      ],
+      "showOutline": true,
+      "isRepeating": true,
+      "allowAddRemove": true,
+      "defaultRepetitions": 1,
+      "type": "dynamiclist",
+      "layout": {
+        "row": "Row_1hdf3hl",
+        "columns": null
+      },
+      "id": "Field_1klx7sg",
+      "path": "dynamiclist_meet",
+      "disableCollapse": true
+    },
+    {
+      "subtype": "datetime",
+      "dateLabel": "Срок доставки",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1k2fvmp",
+        "columns": null
+      },
+      "id": "Field_14vbjhf",
+      "key": "datetime_lz3gss",
+      "timeLabel": "Time",
+      "timeSerializingFormat": "utc_offset",
+      "timeInterval": 15,
+      "use24h": true
+    }
+  ],
+  "type": "default",
+  "id": "Form_memo",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.8.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.41.0"
+  },
+  "schemaVersion": 19
+}

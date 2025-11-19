@@ -1,0 +1,79 @@
+{
+  suppliers: [
+    {
+      id: "supplier_1",
+      company_name: "Мясной Двор",
+      prices: {
+        virezka: 450,
+        okorok: 380,
+        lopatka: 320,
+        sheya: 280,
+        rebra: 350
+      },
+      freshness_category: "svezhee",
+      delivery_days: 1,
+      has_certificates: true,
+      payment_terms: "predoplata"
+    },
+    {
+      id: "supplier_2",
+      company_name: "Фермерские Продукты",
+      prices: {
+        virezka: 520,
+        okorok: 420,
+        lopatka: 350,
+        sheya: 300,
+        rebra: 380
+      },
+      freshness_category: "svezhee",
+      delivery_days: 2,
+      has_certificates: true,
+      payment_terms: "otsrochka"
+    },
+    {
+      id: "supplier_3",
+      company_name: "СвиноГрад",
+      prices: {
+        virezka: 380,
+        okorok: 320,
+        lopatka: 280,
+        sheya: 240,
+        rebra: 300
+      },
+      freshness_category: "skoro_istechet",
+      delivery_days: 1,
+      has_certificates: false,
+      payment_terms: "predoplata"
+    },
+    {
+      id: "supplier_4",
+      company_name: "Премиум Мясо",
+      prices: {
+        virezka: 600,
+        okorok: 480,
+        lopatka: 400,
+        sheya: 350,
+        rebra: 420
+      },
+      freshness_category: "svezhee",
+      delivery_days: 3,
+      has_certificates: true,
+      payment_terms: "otsrochka"
+    },
+    {
+      id: "supplier_5",
+      company_name: "Эко-Ферма",
+      prices: {
+        virezka: 550,
+        okorok: 450,
+        lopatka: 380,
+        sheya: 320,
+        rebra: 400
+      },
+      freshness_category: "svezhee",
+      delivery_days: 2,
+      has_certificates: true,
+      payment_terms: "predoplata"
+    }
+  ]
+}

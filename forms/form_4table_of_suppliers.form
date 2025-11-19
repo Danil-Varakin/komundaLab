@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "text": "# Сводная таблица поставшиков\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_170mb8r",
+        "columns": null
+      },
+      "id": "Field_10avfbx",
+      "properties": {}
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0i3dgnu",
+        "columns": null
+      },
+      "id": "Field_0o323og"
+    },
+    {
+      "type": "table",
+      "layout": {
+        "row": "Row_1k6kix3",
+        "columns": 16
+      },
+      "label": "Table",
+      "rowCount": 10,
+      "columns": [
+        {
+          "key": "name_provider",
+          "label": "Название поставщика"
+        },
+        {
+          "label": "Цена",
+          "key": "price_provider"
+        },
+        {
+          "key": "Paymen_type_provider",
+          "label": "Тип оплаты"
+        },
+        {
+          "label": "Сроки доставки",
+          "key": "Delivery_time_provider"
+        },
+        {
+          "key": "reviews_provider",
+          "label": "Среднее по отзывам"
+        },
+        {
+          "label": "Наличие сертификатов и вет свилетельств",
+          "key": "certificates_provider"
+        }
+      ],
+      "id": "Field_1994eq8",
+      "dataSource": "=Field_1994eq8"
+    }
+  ],
+  "type": "default",
+  "id": "Form_table_of_suppliers",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.8.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.41.0"
+  },
+  "schemaVersion": 19
+}

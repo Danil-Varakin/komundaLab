@@ -1,0 +1,175 @@
+{
+  "components": [
+    {
+      "text": "# Заявка на закупку\n\n",
+      "type": "text",
+      "layout": {
+        "row": "Row_170mb8r",
+        "columns": null
+      },
+      "id": "Field_10avfbx",
+      "properties": {}
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_0i3dgnu",
+        "columns": null
+      },
+      "id": "Field_0o323og"
+    },
+    {
+      "label": "Необходимые товары",
+      "components": [
+        {
+          "label": "Наименование товара",
+          "values": [
+            {
+              "label": "Вырезка",
+              "value": "tenderloin"
+            },
+            {
+              "label": "Окорок",
+              "value": "ham"
+            },
+            {
+              "label": "Лопатка",
+              "value": "shoulder"
+            },
+            {
+              "label": "Шея",
+              "value": "neck"
+            },
+            {
+              "label": "Ребра",
+              "value": "ribs"
+            }
+          ],
+          "type": "select",
+          "layout": {
+            "row": "Row_0nyxzdz",
+            "columns": 5
+          },
+          "id": "Field_0awh1ml",
+          "key": "meet_type",
+          "validate": {
+            "required": true
+          },
+          "defaultValue": "tenderloin"
+        },
+        {
+          "label": "Кол-во",
+          "type": "number",
+          "layout": {
+            "row": "Row_0nyxzdz",
+            "columns": 3
+          },
+          "id": "Field_1sgddtb",
+          "key": "number_qt",
+          "defaultValue": 0,
+          "validate": {
+            "min": "0",
+            "max": "100",
+            "required": true
+          },
+          "decimalDigits": 0
+        },
+        {
+          "label": "Ед. изм.",
+          "values": [
+            {
+              "label": "кг",
+              "value": "kg"
+            },
+            {
+              "label": "грамм",
+              "value": "g"
+            }
+          ],
+          "type": "select",
+          "layout": {
+            "row": "Row_0nyxzdz",
+            "columns": 3
+          },
+          "id": "Field_1qadpn8",
+          "key": "select_kg",
+          "defaultValue": "kg",
+          "searchable": false,
+          "disabled": false,
+          "validate": {
+            "required": true
+          }
+        },
+        {
+          "label": "Температурный режим",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0nyxzdz",
+            "columns": 5
+          },
+          "id": "Field_0u7tfd8",
+          "key": "temperature_regime"
+        },
+        {
+          "label": "Требования к упаковке:",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0xok2dv",
+            "columns": null
+          },
+          "id": "Field_0twhwf5",
+          "key": "Packaging_requirements",
+          "validate": {
+            "required": false
+          }
+        },
+        {
+          "label": "Требования к качеству:",
+          "type": "textarea",
+          "layout": {
+            "row": "Row_1itxxup",
+            "columns": null
+          },
+          "id": "Field_1avb16g",
+          "key": "quality_requirements"
+        }
+      ],
+      "showOutline": true,
+      "isRepeating": true,
+      "allowAddRemove": true,
+      "defaultRepetitions": 1,
+      "type": "dynamiclist",
+      "layout": {
+        "row": "Row_1hdf3hl",
+        "columns": 16
+      },
+      "id": "Field_1klx7sg",
+      "path": "dynamiclist_meet",
+      "disableCollapse": true
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Срок доставки",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1k2fvmp",
+        "columns": null
+      },
+      "id": "Field_14vbjhf",
+      "key": "dateDelivery",
+      "validate": {
+        "required": true
+      },
+      "disallowPassedDates": false
+    }
+  ],
+  "type": "default",
+  "id": "Form_Purchase_request",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.8.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.41.0"
+  },
+  "schemaVersion": 19
+}

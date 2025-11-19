@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="DAnalysis_KP" name="Фильтрация поставщиков по сертификатам и срокам" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.41.0">
+  <decision id="DAnalysisKP" name="Фильтрация поставщиков">
+    <variable name="filteredSuppliers" type="Feel" />
+    <informationRequirement>
+      <requiredInput href="#suppliers_input" />
+    </informationRequirement>
+    <informationRequirement>
+      <requiredInput href="#request_input" />
+    </informationRequirement>
+    <decisionTable outputLabel="Статус поставщика">
+      <input id="input1" label="Наличие сертификатов">
+        <inputExpression>
+          <text>has_certificates</text>
+        </inputExpression>
+      </input>
+      <input id="input2" label="Срок поставки поставщика" biodi:width="376">
+        <inputExpression typeRef="Any">
+          <text>delivery_days</text>
+        </inputExpression>
+      </input>
+      <output id="output1" label="Статус">
+        <outputValues>
+          <text>"ПРОШЕЛ","ОТКЛОНЕН"</text>
+        </outputValues>
+      </output>
+      <rule id="rule_passed">
+        <inputEntry id="entry_passed1">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="entry_passed2">
+          <text>today() + delivery_days &lt;= dateDelivery</text>
+        </inputEntry>
+        <outputEntry id="result_passed">
+          <text>"ПРОШЕЛ"</text>
+        </outputEntry>
+      </rule>
+      <rule id="rule_rejected1">
+        <inputEntry id="entry_rejected1">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="entry_rejected2">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="result_rejected1">
+          <text>"ОТКЛОНЕН"</text>
+        </outputEntry>
+      </rule>
+      <rule id="rule_rejected2">
+        <inputEntry id="entry_rejected2-1">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="entry_rejected2-2">
+          <text>today() + delivery_days &gt; dateDelivery</text>
+        </inputEntry>
+        <outputEntry id="result_rejected2">
+          <text>"ОТКЛОНЕН"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="suppliers_input" name="Данные поставщиков">
+    <variable name="suppliersData" type="Feel" />
+  </inputData>
+  <inputData id="request_input" name="Данные заявки">
+    <variable name="purchaseRequest" type="Feel" />
+  </inputData>
+</definitions>
