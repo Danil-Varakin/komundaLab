@@ -19,67 +19,80 @@
       "id": "Field_0o323og"
     },
     {
-      "type": "table",
-      "layout": {
-        "row": "Row_1k6kix3",
-        "columns": 16
-      },
-      "label": "Table",
-      "dataSource": "=sortedSuppliers",
-      "rowCount": 10,
-      "id": "Field_1994eq8",
-      "columns": [
+      "label": "Dynamic list",
+      "components": [
         {
-          "key": "name_provider",
-          "label": "Название поставщика"
+          "label": "Поставщик",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0otxvi2",
+            "columns": null
+          },
+          "id": "Field_0k317s0",
+          "key": "supplierData.supplier.company_name"
         },
         {
-          "label": "Цена",
-          "key": "price_provider"
+          "label": "Средняя стоимость",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0otxvi2",
+            "columns": null
+          },
+          "id": "Field_06azs8c",
+          "key": "supplierData.avgPrice"
         },
         {
-          "key": "Paymen_type_provider",
-          "label": "Тип оплаты"
+          "label": "Дата доставки",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0otxvi2",
+            "columns": null
+          },
+          "id": "Field_1a5adqt",
+          "key": "sortedSuppliers.delivery_days"
         },
         {
-          "label": "Сроки доставки",
-          "key": "Delivery_time_provider"
+          "label": "Налицие сертификатов",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0otxvi2",
+            "columns": null
+          },
+          "id": "Field_1gzoh9x",
+          "key": "sortedSuppliers.has_certificates"
         },
         {
-          "key": "reviews_provider",
-          "label": "Среднее по отзывам"
+          "label": "Тип оплаты",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_0agxwno",
+            "columns": null
+          },
+          "id": "Field_0dx9rd0",
+          "key": "sortedSuppliers.payment_terms"
         },
         {
-          "label": "Наличие сертификатов и вет свилетельств",
-          "key": "certificates_provider"
+          "label": "Подходит",
+          "type": "checkbox",
+          "layout": {
+            "row": "Row_0iy8xoo",
+            "columns": 2
+          },
+          "id": "Field_1ijon1p",
+          "key": "checkbox_cwbft"
         }
       ],
-      "properties": {}
-    },
-    {
-      "type": "table",
+      "showOutline": true,
+      "isRepeating": true,
+      "allowAddRemove": true,
+      "defaultRepetitions": 1,
+      "type": "dynamiclist",
       "layout": {
-        "row": "Row_1juemft",
+        "row": "Row_1h11orp",
         "columns": null
       },
-      "label": "Table",
-      "rowCount": 10,
-      "columns": [
-        {
-          "label": "ID",
-          "key": "id"
-        },
-        {
-          "label": "Name",
-          "key": "name"
-        },
-        {
-          "label": "Date",
-          "key": "date"
-        }
-      ],
-      "id": "Field_1y77h71",
-      "dataSource": "=sortedSuppliers.supplier"
+      "id": "Field_1w5hw9v",
+      "path": "dynamiclist_5bwk1u"
     }
   ],
   "type": "default",

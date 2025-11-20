@@ -29,7 +29,7 @@
             "columns": null
           },
           "id": "Field_0zz3zyi",
-          "key": "Cafe_name",
+          "key": "company_name",
           "validate": {
             "required": true
           },
@@ -253,8 +253,7 @@
       "validate": {
         "required": true
       },
-      "readonly": true,
-      "description": "=today()"
+      "readonly": false
     }
   ],
   "type": "default",

@@ -105,26 +105,6 @@
       "path": "dynamiclist_meet"
     },
     {
-      "label": "категория мяса",
-      "values": [
-        {
-          "label": "Свежее",
-          "value": "svezhee"
-        },
-        {
-          "label": "Истекает срок годности",
-          "value": "nesvezhee"
-        }
-      ],
-      "type": "select",
-      "layout": {
-        "row": "Row_0fdc3gl",
-        "columns": 3
-      },
-      "id": "Field_0aea3kl",
-      "key": "freshness_category"
-    },
-    {
       "label": "Тип оплаты",
       "values": [
         {
