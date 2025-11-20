@@ -25,7 +25,9 @@
         "columns": 16
       },
       "label": "Table",
+      "dataSource": "=sortedSuppliers",
       "rowCount": 10,
+      "id": "Field_1994eq8",
       "columns": [
         {
           "key": "name_provider",
@@ -52,8 +54,32 @@
           "key": "certificates_provider"
         }
       ],
-      "id": "Field_1994eq8",
-      "dataSource": "=Field_1994eq8"
+      "properties": {}
+    },
+    {
+      "type": "table",
+      "layout": {
+        "row": "Row_1juemft",
+        "columns": null
+      },
+      "label": "Table",
+      "rowCount": 10,
+      "columns": [
+        {
+          "label": "ID",
+          "key": "id"
+        },
+        {
+          "label": "Name",
+          "key": "name"
+        },
+        {
+          "label": "Date",
+          "key": "date"
+        }
+      ],
+      "id": "Field_1y77h71",
+      "dataSource": "=sortedSuppliers.supplier"
     }
   ],
   "type": "default",

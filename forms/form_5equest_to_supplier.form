@@ -32,7 +32,8 @@
           "key": "Cafe_name",
           "validate": {
             "required": true
-          }
+          },
+          "defaultValue": "На Улях"
         },
         {
           "label": "Адрес кафе:",
@@ -45,7 +46,8 @@
           "key": "Cafe_address",
           "validate": {
             "required": true
-          }
+          },
+          "defaultValue": "г.Москва,ул.Пушкина,д.Колотушкина 12"
         },
         {
           "label": "Фио сотрудника:",
@@ -58,7 +60,8 @@
           "key": "Employee_name",
           "validate": {
             "required": true
-          }
+          },
+          "defaultValue": "Иванов Иван Иванович"
         },
         {
           "label": "Контакный номер:",
@@ -86,7 +89,7 @@
           "key": "email_address"
         },
         {
-          "subtype": "datetime",
+          "subtype": "date",
           "dateLabel": "Срок доставки",
           "type": "datetime",
           "layout": {
@@ -94,11 +97,7 @@
             "columns": null
           },
           "id": "Field_14vbjhf",
-          "key": "Delivery_time",
-          "timeLabel": "Time",
-          "timeSerializingFormat": "utc_offset",
-          "timeInterval": 15,
-          "use24h": true,
+          "key": "date_delivery_wait",
           "validate": {
             "required": true
           }
@@ -254,7 +253,8 @@
       "validate": {
         "required": true
       },
-      "readonly": true
+      "readonly": true,
+      "description": "=today()"
     }
   ],
   "type": "default",

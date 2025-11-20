@@ -1,0 +1,178 @@
+{
+  "components": [
+    {
+      "text": "# Формирование комерческого предложения для заказчика",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ds6h2o",
+        "columns": null
+      },
+      "id": "Field_1czm0v3"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1b62smu",
+        "columns": null
+      },
+      "id": "Field_1393un0"
+    },
+    {
+      "label": "Наименование компании",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0fnqum0",
+        "columns": null
+      },
+      "id": "Field_1qxcn0b",
+      "key": "company_name",
+      "defaultValue": "ООО\"Рога и копыта\""
+    },
+    {
+      "label": "Dynamic list",
+      "components": [
+        {
+          "label": "Наименование товара",
+          "values": [
+            {
+              "label": "Value",
+              "value": "value"
+            }
+          ],
+          "type": "select",
+          "layout": {
+            "row": "Row_1ckafic",
+            "columns": null
+          },
+          "id": "Field_17ru55r",
+          "key": "meet_type",
+          "validate": {
+            "required": true
+          }
+        },
+        {
+          "label": "Кол-во",
+          "type": "number",
+          "layout": {
+            "row": "Row_1ckafic",
+            "columns": null
+          },
+          "id": "Field_1d8bvi2",
+          "key": "number_qt",
+          "defaultValue": 1,
+          "validate": {
+            "required": true,
+            "min": "0"
+          },
+          "readonly": true
+        },
+        {
+          "label": "Ед. изм.",
+          "values": [],
+          "type": "select",
+          "layout": {
+            "row": "Row_1ckafic",
+            "columns": null
+          },
+          "id": "Field_0sw3qcc",
+          "key": "select_kg",
+          "readonly": true
+        },
+        {
+          "label": "Стоимость в руб.",
+          "type": "number",
+          "layout": {
+            "row": "Row_13b4a98",
+            "columns": 3
+          },
+          "id": "Field_0luli0u",
+          "key": "meet_cost",
+          "validate": {
+            "required": true
+          }
+        }
+      ],
+      "showOutline": true,
+      "isRepeating": true,
+      "allowAddRemove": true,
+      "defaultRepetitions": 1,
+      "type": "dynamiclist",
+      "layout": {
+        "row": "Row_1slji7o",
+        "columns": null
+      },
+      "id": "Field_1ik8i76",
+      "path": "dynamiclist_meet"
+    },
+    {
+      "label": "категория мяса",
+      "values": [
+        {
+          "label": "Свежее",
+          "value": "svezhee"
+        },
+        {
+          "label": "Истекает срок годности",
+          "value": "nesvezhee"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0fdc3gl",
+        "columns": 3
+      },
+      "id": "Field_0aea3kl",
+      "key": "freshness_category"
+    },
+    {
+      "label": "Тип оплаты",
+      "values": [
+        {
+          "label": "Предоплата",
+          "value": "predoplata"
+        },
+        {
+          "label": "отсрочка платежа",
+          "value": "otsrochka"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0fdc3gl",
+        "columns": 12
+      },
+      "id": "Field_1e003lf",
+      "key": "payment_terms"
+    },
+    {
+      "label": "Наличие сетрефикатов",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1qzof5k",
+        "columns": 4
+      },
+      "id": "Field_19b3ibe",
+      "key": "has_certificates"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Дата доставки",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0j7ywh1",
+        "columns": null
+      },
+      "id": "Field_1td6yvu",
+      "key": "delivery_data"
+    }
+  ],
+  "type": "default",
+  "id": "Form_for_suppler",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.5.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.41.0"
+  },
+  "schemaVersion": 19
+}

@@ -108,7 +108,8 @@
             "columns": 5
           },
           "id": "Field_0u7tfd8",
-          "key": "temperature_regime"
+          "key": "temperature_regime",
+          "defaultValue": "от 0 до +4"
         },
         {
           "label": "Требования к упаковке:",
@@ -121,7 +122,8 @@
           "key": "Packaging_requirements",
           "validate": {
             "required": false
-          }
+          },
+          "defaultValue": "вакуум"
         },
         {
           "label": "Требования к качеству:",
@@ -131,7 +133,8 @@
             "columns": null
           },
           "id": "Field_1avb16g",
-          "key": "quality_requirements"
+          "key": "quality_requirements",
+          "defaultValue": "Соответствие ГОСТ, ТУ, категория свежести, отсутствие посторонних запахов и загрязнений."
         }
       ],
       "showOutline": true,
@@ -156,7 +159,7 @@
         "columns": null
       },
       "id": "Field_14vbjhf",
-      "key": "dateDelivery",
+      "key": "date_delivery_wait",
       "validate": {
         "required": true
       },

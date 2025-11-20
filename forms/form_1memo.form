@@ -110,7 +110,7 @@
       "disableCollapse": true
     },
     {
-      "subtype": "datetime",
+      "subtype": "date",
       "dateLabel": "Срок доставки",
       "type": "datetime",
       "layout": {
@@ -118,11 +118,10 @@
         "columns": null
       },
       "id": "Field_14vbjhf",
-      "key": "datetime_lz3gss",
-      "timeLabel": "Time",
-      "timeSerializingFormat": "utc_offset",
-      "timeInterval": 15,
-      "use24h": true
+      "key": "date_delivery_wait",
+      "validate": {
+        "required": true
+      }
     }
   ],
   "type": "default",
